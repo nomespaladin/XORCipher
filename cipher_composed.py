@@ -1,6 +1,7 @@
 import random
 import string
 from datetime import datetime
+import os
 
 
 def generate_token():
@@ -16,21 +17,24 @@ print(f"Generated key >> {key}")
 
 enc_name = input("Enter name of the file to encrypt:")
 
-def xor_encrypt(key):
-    try:
-        with open(enc_name,'rb') as file:
-            data = file.read()
+def xor_encrypt(path,key):
+    for root,dirs,files in os.walk(path) :
+        for file in files :
+            with open (file,"rb") as cfile :
+                try:
+                    with open(enc_name,'rb') as file:
+                        data = file.read()
 
-        key_bytes = bytearray(key, 'utf-8')
-        encrypted_data = bytearray()
-        for i, byte in enumerate(data):
-           #print(i,byte)
-           encrypted_data.append(byte ^ key_bytes[i % len(key_bytes)])
+                    key_bytes = bytearray(key, 'utf-8')
+                    encrypted_data = bytearray()
+                    for i, byte in enumerate(data):
+                    #print(i,byte)
+                        encrypted_data.append(byte ^ key_bytes[i % len(key_bytes)])
 
-        with open(enc_name, 'wb') as encrypted:
-            encrypted.write(encrypted_data)
-    except FileNotFoundError:
-        print("Error: File not found")
+                    with open(enc_name, 'wb') as encrypted:
+                        encrypted.write(encrypted_data)
+                except FileNotFoundError:
+                    print("Error: File not found")
 
 xaa = xor_encrypt(key)
 print("File successfully encrypted")
