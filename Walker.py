@@ -1,37 +1,31 @@
-import shutil
 import os
+import shutil
+#from fileX import funcionX
 
-# #This can help more with de BackupFunction I think
-# #Copy single files 
-# shutil.copy('file.txt', 'file_copy.txt')
-# #Copy directories
-# shutil.copytree('folder', 'folder_copy')
-# #Can move directories and files
-# shutil.move('folder_copy','new_destination/folder_copy')
-# #function to copy the permission bits
-# shutil.copystat('folder', 'folder_copy')
-# #If we want to remove a directory and all its contents
-# shutil.rmtree('directory')
-
+user = os.getlogin()
+#Change:  user_path = f"C:\Usuarios\{user}", path = os.path.normpath(os.path.join(user_path, directory))
+target_directory = os.path.join("C:\\", "Users", user, "Documents")
 
 def walker():
-    user = os.getlogin()
-    user_path = f"C:\Usuarios\{user}"
-    print(f"The basic directory is: {user_path}")
-    #In this line I'm trying to list the content of the directory I keep trying to figure out how to do it
-    print(os.listdir(user_path))
-    directory  = input("Write the directory you want to sript: ")
-    #This line is because when you use the os.path.join its have problems with \ or /
-    path = os.path.normpath(os.path.join(user_path, directory))
-    print(f"{path}")
-
-#prueba
-#This function lists the directories in the current directory and then displays the contents of the directory it tells you
-#May be useful later
-
-def prueba():
-    print(os.listdir(os.getcwd()))
-    directory  = input("Write the directory you want to list the content: ")
-    print(os.listdir(directory))
-
-prueba()
+    try:
+        print(f"Searching the directory: {target_directory}")
+            #os.path.isdir is useful to make sure the directory exist
+        if not os.path.isdir(target_directory):
+            print(f"El directory doesn't exist {target_directory}.") 
+        for root, dirs, files in os.walk(target_directory):
+            #Backup function
+            #Print the current directory
+            print(f"Current directory: {root}")
+            #If is because we have to verify if there any subdirecories in it
+            if dirs:
+                #Print all the subdirectories found in the target_directory and separate them by commas
+                print(f"Subdirectories: {','.join(dirs)}")
+            #Again If is because we have to verify if there any file in it
+            if files:
+                print(f"Files: {','.join(files)}")
+            break
+    #Exception Error        
+    except Exception as e:
+        print(f"Error trying to find directory: {e}")
+#Call the function
+walker(target_directory)
