@@ -41,6 +41,10 @@ pip install paramiko requests
 
 1.Clone the repository:
 
+````sh
+git clone https://github.com/yourusername/xorcipher.git
+````
+Navigate to the project directory:
 
 ```sh
 cd xorcipher
@@ -88,8 +92,3 @@ XORDeV Team for the original design and implementation.
 The Python community for the libraries and resources that made this project possible.
 
 
-Navigate to the project directory:
-
-````sh
-git clone https://github.com/yourusername/xorcipher.git
-````
