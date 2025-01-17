@@ -85,8 +85,6 @@ This project is licensed under the MIT License - see the **LICENSE** file for de
 XORDeV Team for the original design and implementation.
 The Python community for the libraries and resources that made this project possible.
 
-## Contact
-For any inquiries or feedback, please contact the author at: [your.email@example.com] ``
 
 Navigate to the project directory:
 
