@@ -4,7 +4,7 @@
 
 The XORCipher is an encryption program designed for educational purposes. It simulates a ransomware-like behavior in a controlled environment, allowing users to encrypt files and generate decryption keys. The program is built using Python and utilizes various libraries for file handling, system information retrieval, and network communication.
 
-You can visit hte project website at : http://seed.cybertrolls.cloud
+project website is now offline 
 
 **Disclaimer:** The authors and maintainers of this code assume NO responsibility for any consequences arising from its use, including cybercrimes and data loss. Use this code responsibly and ethically.
 
