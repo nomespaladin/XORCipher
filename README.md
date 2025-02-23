@@ -91,4 +91,45 @@ This project is licensed under the MIT License - see the **LICENSE** file for de
 XORDeV Team for the original design and implementation.
 The Python community for the libraries and resources that made this project possible.
 
+```sh
+ __________          
+|XORCIPHER |
+|ENCRYPTION|
+|PROGRAM   |
+|AND       |
+|LIBRARY   |
+|__________|
+
+By:Nomespaladin 
+
+# This code is for educational purposes only.
+    | # <simulates a ransomware on an RCE environment>     
+# The authors and maintainers of this code assume NO responsibility.
+    | # cibercrimes
+    | # data loss
+# for any consequences arising from its use.
+
+# With great power comes great responsibility
+                                                     
+
+[+]> Current System > OS:Linux | Architecture:x86_64 | Version:6.13.3-arch1-1 |
+[+]> USING > /home/nomespaladin
+[+]> PROCESS > DIRECTORIES FOUND ON SYSTEM 
+
+[+]> MESSAGE > CHOOSE DIR NUMBER OR 'A' FOR ALL DIRECTORIES 
+[+]> WARNING > BE CAERFUL CHOOSING 'A' IF YOU ARE RUNNING WITH PRIVILEGES!
+0 > Desktop
+1 > Music
+2 > VirtualBox VMs
+3 > Documents
+4 > Templates
+5 > Public
+6 > go
+7 > Pictures
+8 > Videos
+9 > Downloads
+[+]> CHOOSE DIRECTORY TO ENCRYPT OR 'A':
+
+```
+
 
